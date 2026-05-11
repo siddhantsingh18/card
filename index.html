@@ -1,0 +1,1076 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Happy Mother's Day My Love 💋</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700&family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,600&family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --red: #c0392b;
+    --red-light: #e74c3c;
+    --red-dark: #7b241c;
+    --red-glow: #ff4444;
+    --black: #0a0a0a;
+    --black-soft: #111111;
+    --black-mid: #1a1a1a;
+    --black-card: #141414;
+    --gold: #d4af37;
+    --white: #fff8f5;
+    --white-soft: #f5ebe8;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    background: var(--black);
+    color: var(--white);
+    font-family: 'Montserrat', sans-serif;
+    overflow-x: hidden;
+    cursor: none;
+  }
+
+  /* CUSTOM CURSOR */
+  .cursor {
+    position: fixed;
+    width: 12px; height: 12px;
+    background: var(--red-glow);
+    border-radius: 50%;
+    pointer-events: none;
+    z-index: 99999;
+    transform: translate(-50%, -50%);
+    transition: transform 0.1s, width 0.3s, height 0.3s, background 0.3s;
+    box-shadow: 0 0 12px var(--red-glow), 0 0 24px rgba(255,68,68,0.4);
+  }
+  .cursor-ring {
+    position: fixed;
+    width: 36px; height: 36px;
+    border: 1.5px solid rgba(192,57,43,0.6);
+    border-radius: 50%;
+    pointer-events: none;
+    z-index: 99998;
+    transform: translate(-50%, -50%);
+    transition: transform 0.15s ease-out, width 0.3s, height 0.3s;
+  }
+
+  /* NAV */
+  nav {
+    position: fixed;
+    top: 0; left: 0; right: 0;
+    z-index: 1000;
+    padding: 18px 48px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: linear-gradient(to bottom, rgba(10,10,10,0.95) 0%, transparent 100%);
+    backdrop-filter: blur(4px);
+  }
+  .nav-logo {
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+    font-size: 22px;
+    color: var(--red-light);
+    letter-spacing: 1px;
+  }
+  .nav-links {
+    display: flex;
+    gap: 36px;
+    list-style: none;
+  }
+  .nav-links a {
+    color: rgba(255,248,245,0.7);
+    text-decoration: none;
+    font-size: 11px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    transition: color 0.3s;
+    position: relative;
+  }
+  .nav-links a::after {
+    content: '';
+    position: absolute;
+    bottom: -4px; left: 0;
+    width: 0; height: 1px;
+    background: var(--red-light);
+    transition: width 0.3s;
+  }
+  .nav-links a:hover { color: var(--red-light); }
+  .nav-links a:hover::after { width: 100%; }
+
+  /* PAGES */
+  .page {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+  }
+
+  /* ========== PAGE 1: HERO ========== */
+  #page-hero {
+    background: var(--black);
+    flex-direction: column;
+    text-align: center;
+  }
+  .particles-bg {
+    position: absolute;
+    inset: 0;
+    overflow: hidden;
+    pointer-events: none;
+  }
+  .particle {
+    position: absolute;
+    width: 3px; height: 3px;
+    border-radius: 50%;
+    background: var(--red);
+    opacity: 0;
+    animation: floatParticle var(--dur) linear var(--delay) infinite;
+  }
+  @keyframes floatParticle {
+    0% { transform: translateY(100vh) translateX(0) scale(0); opacity: 0; }
+    10% { opacity: 0.8; }
+    90% { opacity: 0.4; }
+    100% { transform: translateY(-20vh) translateX(var(--drift)) scale(1.5); opacity: 0; }
+  }
+
+  /* Animated rose background */
+  .rose-bg {
+    position: absolute;
+    font-size: 8vw;
+    opacity: 0.04;
+    animation: rotateSlow 20s linear infinite;
+    pointer-events: none;
+    top: 50%; left: 50%;
+    transform-origin: center;
+  }
+
+  .hero-content {
+    position: relative;
+    z-index: 10;
+    padding: 40px 20px;
+  }
+  .hero-badge {
+    display: inline-block;
+    font-size: 10px;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+    color: var(--red-light);
+    border: 1px solid rgba(231,76,60,0.4);
+    padding: 8px 24px;
+    margin-bottom: 40px;
+    animation: fadeInDown 1s 0.3s both;
+    position: relative;
+    overflow: hidden;
+  }
+  .hero-badge::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: rgba(192,57,43,0.08);
+    animation: shimmer 2.5s ease-in-out infinite;
+  }
+  @keyframes shimmer {
+    0%,100% { opacity: 0; }
+    50% { opacity: 1; }
+  }
+
+  .hero-title {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(52px, 8vw, 110px);
+    font-weight: 900;
+    line-height: 0.95;
+    margin-bottom: 16px;
+    animation: fadeInUp 1s 0.5s both;
+  }
+  .hero-title .line1 { display: block; color: var(--white); }
+  .hero-title .line2 {
+    display: block;
+    color: var(--red-light);
+    font-style: italic;
+    animation: fadeInUp 1s 0.7s both;
+    text-shadow: 0 0 60px rgba(231,76,60,0.3);
+  }
+  .hero-title .line3 {
+    display: block;
+    color: var(--white);
+    animation: fadeInUp 1s 0.9s both;
+  }
+
+  .hero-subtitle {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-size: clamp(18px, 2.5vw, 28px);
+    color: rgba(255,248,245,0.65);
+    margin: 28px 0 52px;
+    animation: fadeInUp 1s 1.1s both;
+    letter-spacing: 1px;
+  }
+
+  .hero-btn {
+    display: inline-block;
+    padding: 18px 52px;
+    background: var(--red);
+    color: var(--white);
+    text-decoration: none;
+    font-size: 11px;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    position: relative;
+    overflow: hidden;
+    animation: fadeInUp 1s 1.3s both;
+    transition: transform 0.3s, box-shadow 0.3s;
+  }
+  .hero-btn::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: var(--red-light);
+    transform: translateX(-100%);
+    transition: transform 0.4s ease;
+  }
+  .hero-btn:hover::before { transform: translateX(0); }
+  .hero-btn:hover { transform: translateY(-3px); box-shadow: 0 20px 40px rgba(192,57,43,0.4); }
+  .hero-btn span { position: relative; z-index: 1; }
+
+  /* Scroll indicator */
+  .scroll-hint {
+    position: absolute;
+    bottom: 36px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    animation: fadeInUp 1s 1.8s both;
+    opacity: 0.5;
+  }
+  .scroll-hint span {
+    font-size: 9px;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    color: var(--red-light);
+  }
+  .scroll-line {
+    width: 1px;
+    height: 50px;
+    background: linear-gradient(to bottom, var(--red-light), transparent);
+    animation: scrollAnim 2s ease-in-out infinite;
+  }
+  @keyframes scrollAnim {
+    0%,100% { transform: scaleY(1); opacity: 0.5; }
+    50% { transform: scaleY(0.4); opacity: 1; }
+  }
+
+  /* ========== PAGE 2: LOVE LETTER ========== */
+  #page-letter {
+    background: var(--black-soft);
+    padding: 120px 40px;
+    flex-direction: column;
+  }
+  #page-letter::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 2px;
+    background: linear-gradient(to right, transparent, var(--red), transparent);
+  }
+
+  .section-label {
+    font-size: 10px;
+    letter-spacing: 6px;
+    text-transform: uppercase;
+    color: var(--red-light);
+    margin-bottom: 16px;
+    opacity: 0;
+    animation: fadeInUp 0.8s forwards;
+  }
+  .section-title {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(36px, 5vw, 72px);
+    color: var(--white);
+    margin-bottom: 60px;
+    opacity: 0;
+    animation: fadeInUp 0.8s 0.15s forwards;
+  }
+  .section-title em { color: var(--red-light); font-style: italic; }
+
+  .letter-card {
+    max-width: 780px;
+    width: 100%;
+    background: var(--black-card);
+    border: 1px solid rgba(192,57,43,0.2);
+    padding: 64px 72px;
+    position: relative;
+    opacity: 0;
+    animation: fadeInUp 1s 0.3s both;
+    transform-origin: top center;
+  }
+  .letter-card::before, .letter-card::after {
+    content: '';
+    position: absolute;
+    width: 40px; height: 40px;
+    border-color: var(--red);
+    border-style: solid;
+  }
+  .letter-card::before { top: -1px; left: -1px; border-width: 2px 0 0 2px; }
+  .letter-card::after { bottom: -1px; right: -1px; border-width: 0 2px 2px 0; }
+
+  .letter-date {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-size: 14px;
+    color: var(--red-light);
+    margin-bottom: 32px;
+    letter-spacing: 2px;
+  }
+  .letter-greeting {
+    font-family: 'Playfair Display', serif;
+    font-size: 32px;
+    font-style: italic;
+    color: var(--white);
+    margin-bottom: 32px;
+  }
+  .letter-body {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 19px;
+    line-height: 1.9;
+    color: rgba(255,248,245,0.82);
+    margin-bottom: 28px;
+  }
+  .letter-body strong { color: var(--red-light); font-weight: 400; font-style: italic; }
+  .letter-sign {
+    font-family: 'Playfair Display', serif;
+    font-size: 28px;
+    font-style: italic;
+    color: var(--red-light);
+    text-align: right;
+    margin-top: 48px;
+  }
+
+  /* ========== PAGE 3: REASONS ========== */
+  #page-reasons {
+    background: var(--black);
+    padding: 120px 40px;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  #page-reasons::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 2px;
+    background: linear-gradient(to right, transparent, var(--red), transparent);
+  }
+
+  .reasons-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2px;
+    max-width: 1100px;
+    width: 100%;
+    margin-top: 20px;
+  }
+  .reason-card {
+    background: var(--black-card);
+    padding: 48px 40px;
+    text-align: left;
+    border: 1px solid rgba(192,57,43,0.1);
+    position: relative;
+    overflow: hidden;
+    opacity: 0;
+    transform: translateY(30px);
+    transition: transform 0.5s, border-color 0.4s, box-shadow 0.4s;
+  }
+  .reason-card.visible {
+    opacity: 1;
+    transform: translateY(0);
+    animation: fadeInCard 0.6s both;
+  }
+  @keyframes fadeInCard {
+    from { opacity: 0; transform: translateY(40px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  .reason-card:hover {
+    border-color: rgba(231,76,60,0.4);
+    box-shadow: 0 8px 48px rgba(192,57,43,0.15);
+    transform: translateY(-4px);
+  }
+  .reason-card::before {
+    content: '';
+    position: absolute;
+    bottom: 0; left: 0; right: 0;
+    height: 2px;
+    background: var(--red);
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.4s;
+  }
+  .reason-card:hover::before { transform: scaleX(1); }
+
+  .reason-num {
+    font-family: 'Playfair Display', serif;
+    font-size: 64px;
+    font-weight: 900;
+    color: rgba(192,57,43,0.12);
+    line-height: 1;
+    margin-bottom: 16px;
+    transition: color 0.3s;
+  }
+  .reason-card:hover .reason-num { color: rgba(231,76,60,0.2); }
+  .reason-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 20px;
+    color: var(--red-light);
+    margin-bottom: 14px;
+    font-style: italic;
+  }
+  .reason-text {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 17px;
+    line-height: 1.7;
+    color: rgba(255,248,245,0.7);
+  }
+
+  /* ========== PAGE 4: GALLERY / MOMENTS ========== */
+  #page-moments {
+    background: var(--black-soft);
+    padding: 120px 40px;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  #page-moments::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 2px;
+    background: linear-gradient(to right, transparent, var(--red), transparent);
+  }
+
+  .moments-track-wrap {
+    width: 100%;
+    overflow: hidden;
+    margin-top: 40px;
+    padding: 20px 0;
+  }
+  .moments-track {
+    display: flex;
+    gap: 24px;
+    width: max-content;
+    animation: scrollTrack 25s linear infinite;
+  }
+  .moments-track:hover { animation-play-state: paused; }
+  @keyframes scrollTrack {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
+  }
+  .moment-tile {
+    width: 280px;
+    height: 340px;
+    background: var(--black-card);
+    border: 1px solid rgba(192,57,43,0.15);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 40px 32px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    flex-shrink: 0;
+    transition: border-color 0.4s, transform 0.4s;
+    cursor: default;
+  }
+  .moment-tile:hover {
+    border-color: rgba(231,76,60,0.5);
+    transform: scale(1.03);
+  }
+  .moment-tile::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(circle at center, rgba(192,57,43,0.06) 0%, transparent 70%);
+    opacity: 0;
+    transition: opacity 0.4s;
+  }
+  .moment-tile:hover::before { opacity: 1; }
+  .moment-icon {
+    font-size: 52px;
+    margin-bottom: 20px;
+    filter: drop-shadow(0 4px 16px rgba(192,57,43,0.3));
+    animation: heartBeat 3s ease-in-out infinite;
+  }
+  .moment-tile:nth-child(odd) .moment-icon { animation-delay: -1.5s; }
+  @keyframes heartBeat {
+    0%,100% { transform: scale(1); }
+    14% { transform: scale(1.1); }
+    28% { transform: scale(1); }
+    42% { transform: scale(1.08); }
+    56% { transform: scale(1); }
+  }
+  .moment-quote {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-size: 17px;
+    line-height: 1.6;
+    color: rgba(255,248,245,0.8);
+    margin-bottom: 16px;
+  }
+  .moment-label {
+    font-size: 9px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--red-light);
+    opacity: 0.7;
+  }
+
+  /* ========== PAGE 5: FINAL WISH ========== */
+  #page-wish {
+    background: var(--black);
+    flex-direction: column;
+    text-align: center;
+    padding: 80px 40px;
+    position: relative;
+  }
+  #page-wish::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 2px;
+    background: linear-gradient(to right, transparent, var(--red), transparent);
+  }
+
+  .wish-circle {
+    width: 280px;
+    height: 280px;
+    border-radius: 50%;
+    border: 1px solid rgba(192,57,43,0.25);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    margin: 0 auto 56px;
+    animation: rotateBorder 20s linear infinite;
+  }
+  .wish-circle::before {
+    content: '';
+    position: absolute;
+    inset: 12px;
+    border-radius: 50%;
+    border: 1px solid rgba(192,57,43,0.15);
+  }
+  .wish-circle::after {
+    content: '';
+    position: absolute;
+    inset: -20px;
+    border-radius: 50%;
+    border: 1px dashed rgba(192,57,43,0.1);
+    animation: rotateBorder 30s linear infinite reverse;
+  }
+  .wish-heart {
+    font-size: 80px;
+    animation: heartBeat 2s ease-in-out infinite;
+    filter: drop-shadow(0 0 30px rgba(231,76,60,0.5));
+    position: relative;
+    z-index: 1;
+  }
+  @keyframes rotateBorder {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+  }
+
+  .wish-title {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(42px, 6vw, 88px);
+    font-weight: 900;
+    line-height: 1;
+    margin-bottom: 24px;
+    color: var(--white);
+  }
+  .wish-title .accent {
+    display: block;
+    color: var(--red-light);
+    font-style: italic;
+    text-shadow: 0 0 80px rgba(231,76,60,0.25);
+  }
+  .wish-sub {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-size: clamp(18px, 2.5vw, 26px);
+    color: rgba(255,248,245,0.6);
+    max-width: 540px;
+    margin: 0 auto 64px;
+    line-height: 1.7;
+  }
+
+  .fireworks-btn {
+    display: inline-block;
+    padding: 20px 64px;
+    background: transparent;
+    color: var(--red-light);
+    border: 1px solid var(--red);
+    font-family: 'Montserrat', sans-serif;
+    font-size: 11px;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    cursor: none;
+    position: relative;
+    overflow: hidden;
+    transition: color 0.4s, transform 0.3s;
+  }
+  .fireworks-btn::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: var(--red);
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform 0.4s ease;
+  }
+  .fireworks-btn:hover::before { transform: scaleX(1); transform-origin: left; }
+  .fireworks-btn:hover { color: var(--white); transform: translateY(-3px); }
+  .fireworks-btn span { position: relative; z-index: 1; }
+
+  /* Firework particles */
+  .firework {
+    position: fixed;
+    width: 6px; height: 6px;
+    border-radius: 50%;
+    pointer-events: none;
+    z-index: 9999;
+    animation: fireworkExplode 1.2s ease-out forwards;
+  }
+  @keyframes fireworkExplode {
+    0% { transform: translate(0,0) scale(1); opacity: 1; }
+    100% { transform: translate(var(--tx), var(--ty)) scale(0); opacity: 0; }
+  }
+
+  /* Floating hearts */
+  .floating-heart {
+    position: fixed;
+    pointer-events: none;
+    z-index: 9998;
+    font-size: var(--size);
+    animation: floatHeart 2.5s ease-out forwards;
+    opacity: 0.9;
+  }
+  @keyframes floatHeart {
+    0% { transform: translateY(0) translateX(0) rotate(0deg); opacity: 0.9; }
+    100% { transform: translateY(-250px) translateX(var(--hx)) rotate(30deg); opacity: 0; }
+  }
+
+  /* FOOTER */
+  footer {
+    background: var(--black-soft);
+    text-align: center;
+    padding: 40px;
+    border-top: 1px solid rgba(192,57,43,0.15);
+  }
+  footer p {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    color: rgba(255,248,245,0.35);
+    font-size: 15px;
+    letter-spacing: 1px;
+  }
+  footer .footer-heart { color: var(--red-light); animation: heartBeat 2s ease-in-out infinite; display: inline-block; }
+
+  /* ANIMS */
+  @keyframes fadeInDown {
+    from { opacity: 0; transform: translateY(-20px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  @keyframes fadeInUp {
+    from { opacity: 0; transform: translateY(30px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  @keyframes rotateSlow {
+    from { transform: translate(-50%, -50%) rotate(0deg); }
+    to { transform: translate(-50%, -50%) rotate(360deg); }
+  }
+
+  /* ===== SCROLL REVEAL ===== */
+  .reveal {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: opacity 0.8s, transform 0.8s;
+  }
+  .reveal.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  /* RIBBON */
+  .ribbon {
+    display: inline-flex;
+    align-items: center;
+    gap: 16px;
+    margin-bottom: 32px;
+    opacity: 0;
+    animation: fadeInUp 0.8s 0.1s both;
+  }
+  .ribbon-line {
+    width: 60px;
+    height: 1px;
+    background: linear-gradient(to right, transparent, var(--red-light));
+  }
+  .ribbon-line.right {
+    background: linear-gradient(to left, transparent, var(--red-light));
+  }
+  .ribbon-text {
+    font-size: 10px;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+    color: var(--red-light);
+  }
+
+  /* Petals */
+  .petal {
+    position: fixed;
+    font-size: var(--ps);
+    pointer-events: none;
+    z-index: 9997;
+    animation: petalFall var(--pd) linear var(--pde) infinite;
+    opacity: 0;
+    top: -60px;
+    left: var(--pl);
+  }
+  @keyframes petalFall {
+    0% { opacity: 0; transform: translateY(0) rotate(0deg) translateX(0); }
+    10% { opacity: 0.8; }
+    90% { opacity: 0.6; }
+    100% { opacity: 0; transform: translateY(110vh) rotate(720deg) translateX(var(--pdx)); }
+  }
+
+  @media (max-width: 768px) {
+    nav { padding: 16px 24px; }
+    .nav-links { display: none; }
+    .letter-card { padding: 40px 32px; }
+    .reasons-grid { grid-template-columns: 1fr; }
+  }
+</style>
+</head>
+<body>
+
+<!-- CURSOR -->
+<div class="cursor" id="cursor"></div>
+<div class="cursor-ring" id="cursorRing"></div>
+
+<!-- FALLING PETALS -->
+<div id="petals"></div>
+
+<!-- NAV -->
+<nav>
+  <div class="nav-logo">For My Love ♥</div>
+  <ul class="nav-links">
+    <li><a href="#page-hero">Home</a></li>
+    <li><a href="#page-letter">Letter</a></li>
+    <li><a href="#page-reasons">Reasons</a></li>
+    <li><a href="#page-moments">Moments</a></li>
+    <li><a href="#page-wish">Wish</a></li>
+  </ul>
+</nav>
+
+<!-- ===== PAGE 1: HERO ===== -->
+<section class="page" id="page-hero">
+  <div class="particles-bg" id="particles"></div>
+
+  <!-- BIG ROSE WATERMARK -->
+  <div class="rose-bg" style="font-size:70vw; top:50%; left:50%; width:1px; height:1px; display:flex; align-items:center; justify-content:center;">🌹</div>
+
+  <div class="hero-content">
+    <div class="hero-badge">With All My Heart</div>
+
+    <h1 class="hero-title">
+      <span class="line1">Happy</span>
+      <span class="line2">Mother's Day</span>
+      <span class="line3">My Everything</span>
+    </h1>
+
+    <p class="hero-subtitle">
+      To the woman who is both my love and my home —<br>
+      you nurture me like no one else ever has.
+    </p>
+
+    <a href="#page-letter" class="hero-btn"><span>Read My Heart ↓</span></a>
+  </div>
+
+  <div class="scroll-hint">
+    <span>Scroll</span>
+    <div class="scroll-line"></div>
+  </div>
+</section>
+
+<!-- ===== PAGE 2: LETTER ===== -->
+<section class="page" id="page-letter" style="min-height:auto; padding: 130px 40px;">
+  <div style="max-width:900px; width:100%;">
+    <div class="ribbon reveal">
+      <div class="ribbon-line"></div>
+      <span class="ribbon-text">A Letter From My Soul</span>
+      <div class="ribbon-line right"></div>
+    </div>
+    <h2 class="section-title reveal" style="opacity:0; animation:none;">
+      Words from <em>my heart</em>
+    </h2>
+
+    <div class="letter-card reveal">
+      <p class="letter-date">May 2025 — Written just for you</p>
+      <p class="letter-greeting">My darling, my love, my mother's day queen,</p>
+      <p class="letter-body">
+        There are women who are called mothers by the children they bring into this world. And then there is <strong>you</strong> — a woman so full of love that you mother everyone around you, especially me.
+      </p>
+      <p class="letter-body">
+        You have held me when I was broken, celebrated me when I was winning, and quietly loved me through every ordinary Tuesday in between. You take care of me not because you have to, but because your heart <strong>simply doesn't know any other way</strong> to be.
+      </p>
+      <p class="letter-body">
+        On this Mother's Day, I want you to know: the world is warmer because you are in it. <strong>My world is possible because of you.</strong> You are a mother in the truest, most beautiful sense — not just to a child, but to the love that lives between us.
+      </p>
+      <p class="letter-body">
+        Thank you for every meal you made, every time you checked if I was okay, every hug that fixed what words couldn't. Thank you for <strong>being my safe place</strong> in a world that can be so loud.
+      </p>
+      <p class="letter-sign">With every heartbeat — yours, always. 🌹</p>
+    </div>
+  </div>
+</section>
+
+<!-- ===== PAGE 3: REASONS ===== -->
+<section class="page" id="page-reasons" style="min-height:auto; padding:130px 40px;">
+  <div style="max-width:1100px; width:100%; text-align:center;">
+    <div class="ribbon reveal" style="justify-content:center;">
+      <div class="ribbon-line"></div>
+      <span class="ribbon-text">Because of You</span>
+      <div class="ribbon-line right"></div>
+    </div>
+    <h2 class="section-title reveal" style="opacity:0; animation:none; text-align:center;">
+      Why you <em>deserve</em> today
+    </h2>
+    <div class="reasons-grid" id="reasonsGrid">
+      <div class="reason-card">
+        <div class="reason-num">01</div>
+        <div class="reason-title">You heal me without knowing</div>
+        <p class="reason-text">Even on my worst days, being near you dissolves every worry. Your presence is medicine I never have to ask for.</p>
+      </div>
+      <div class="reason-card">
+        <div class="reason-num">02</div>
+        <div class="reason-title">You see me fully</div>
+        <p class="reason-text">You know my flaws, my fears, my silly habits — and you stay. That is the rarest and most precious gift anyone can give.</p>
+      </div>
+      <div class="reason-card">
+        <div class="reason-num">03</div>
+        <div class="reason-title">You love like a mother does</div>
+        <p class="reason-text">Unconditional, patient, warm. You nurture those you love with a tenderness that the entire world envies.</p>
+      </div>
+      <div class="reason-card">
+        <div class="reason-num">04</div>
+        <div class="reason-title">You make ordinary days magical</div>
+        <p class="reason-text">It's the small things — your laugh, the way you care about details, how you turn a regular evening into a memory.</p>
+      </div>
+      <div class="reason-card">
+        <div class="reason-num">05</div>
+        <div class="reason-title">You take care of me</div>
+        <p class="reason-text">When I forget to eat, when I need rest, when I need a push — you are always there. Quietly, lovingly, perfectly.</p>
+      </div>
+      <div class="reason-card">
+        <div class="reason-num">06</div>
+        <div class="reason-title">You are my greatest gift</div>
+        <p class="reason-text">Of everything life has given me, you are the one I'd choose again and again across every lifetime and every universe.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== PAGE 4: MOMENTS ===== -->
+<section class="page" id="page-moments" style="min-height:auto; padding:130px 0 130px;">
+  <div class="ribbon reveal" style="justify-content:center;">
+    <div class="ribbon-line"></div>
+    <span class="ribbon-text">Our Beautiful Moments</span>
+    <div class="ribbon-line right"></div>
+  </div>
+  <h2 class="section-title reveal" style="opacity:0; animation:none; text-align:center; padding:0 40px;">
+    Memories I <em>cherish</em>
+  </h2>
+
+  <div class="moments-track-wrap">
+    <div class="moments-track" id="track"></div>
+  </div>
+</section>
+
+<!-- ===== PAGE 5: FINAL WISH ===== -->
+<section class="page" id="page-wish">
+  <div class="particles-bg" id="particlesWish"></div>
+  <div style="position:relative; z-index:10;">
+    <div class="wish-circle">
+      <span class="wish-heart">🌹</span>
+    </div>
+    <h2 class="wish-title reveal" style="opacity:0; animation:none;">
+      Happy <span class="accent">Mother's Day</span>
+    </h2>
+    <p class="wish-sub reveal" style="opacity:0; animation:none;">
+      May today remind you how deeply, completely, and endlessly you are loved. You deserve every rose, every smile, every beautiful thing.
+    </p>
+    <button class="fireworks-btn" id="fireworkBtn" onclick="launchCelebration()">
+      <span>Celebrate You ✨</span>
+    </button>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <p>Made with <span class="footer-heart">♥</span> just for you — Happy Mother's Day, my love</p>
+</footer>
+
+<script>
+  // ===== CURSOR =====
+  const cursor = document.getElementById('cursor');
+  const ring = document.getElementById('cursorRing');
+  let mx=0,my=0,rx=0,ry=0;
+  document.addEventListener('mousemove', e => { mx=e.clientX; my=e.clientY; cursor.style.left=mx+'px'; cursor.style.top=my+'px'; });
+  setInterval(()=>{ rx+=(mx-rx)*0.12; ry+=(my-ry)*0.12; ring.style.left=rx+'px'; ring.style.top=ry+'px'; },16);
+  document.querySelectorAll('a,button').forEach(el=>{
+    el.addEventListener('mouseenter',()=>{ cursor.style.width='20px'; cursor.style.height='20px'; });
+    el.addEventListener('mouseleave',()=>{ cursor.style.width='12px'; cursor.style.height='12px'; });
+  });
+
+  // ===== PARTICLES =====
+  function makeParticles(container, count) {
+    for(let i=0;i<count;i++){
+      const p=document.createElement('div');
+      p.className='particle';
+      const x=Math.random()*100;
+      const drift=(Math.random()-0.5)*200+'px';
+      const dur=(4+Math.random()*6)+'s';
+      const delay=(-Math.random()*10)+'s';
+      p.style.cssText=`left:${x}%;--drift:${drift};--dur:${dur};--delay:${delay};`;
+      container.appendChild(p);
+    }
+  }
+  makeParticles(document.getElementById('particles'), 60);
+  makeParticles(document.getElementById('particlesWish'), 40);
+
+  // ===== FALLING PETALS =====
+  const petalContainer=document.getElementById('petals');
+  const petalEmoji=['🌹','🌺','❤️','💋','🌸'];
+  for(let i=0;i<18;i++){
+    const p=document.createElement('div');
+    p.className='petal';
+    const size=(16+Math.random()*22)+'px';
+    const left=(Math.random()*100)+'%';
+    const dur=(8+Math.random()*12)+'s';
+    const delay=(-Math.random()*20)+'s';
+    const dx=((Math.random()-0.5)*160)+'px';
+    p.style.cssText=`--ps:${size};--pl:${left};--pd:${dur};--pde:${delay};--pdx:${dx}`;
+    p.textContent=petalEmoji[i%petalEmoji.length];
+    petalContainer.appendChild(p);
+  }
+
+  // ===== MOMENTS TRACK =====
+  const moments=[
+    {icon:'🌹',quote:'"Every morning with you is my favourite place in the world."',label:'Good Mornings'},
+    {icon:'🍳',quote:'"The way you cook for me says I love you better than any words."',label:'Home & Care'},
+    {icon:'💋',quote:'"Your hugs fix things that nothing else can."',label:'Your Touch'},
+    {icon:'🌙',quote:'"Falling asleep knowing you\'re there is the greatest peace I know."',label:'Quiet Nights'},
+    {icon:'😂',quote:'"Your laugh is my favourite sound in the entire universe."',label:'Our Joy'},
+    {icon:'🌟',quote:'"You believe in me more than I believe in myself."',label:'My Biggest Fan'},
+    {icon:'🤝',quote:'"You hold my hand and the whole world feels steady."',label:'My Anchor'},
+    {icon:'💌',quote:'"Every small message from you brightens my whole day."',label:'Little Things'},
+  ];
+  const track=document.getElementById('track');
+  // Duplicate for seamless loop
+  [...moments,...moments].forEach(m=>{
+    const tile=document.createElement('div');
+    tile.className='moment-tile';
+    tile.innerHTML=`<div class="moment-icon">${m.icon}</div><p class="moment-quote">${m.quote}</p><div class="moment-label">${m.label}</div>`;
+    track.appendChild(tile);
+  });
+
+  // ===== SCROLL REVEAL =====
+  const observer=new IntersectionObserver(entries=>{
+    entries.forEach(e=>{
+      if(e.isIntersecting){
+        e.target.classList.add('visible');
+        if(e.target.classList.contains('section-title')||e.target.classList.contains('wish-title')||e.target.classList.contains('wish-sub')){
+          e.target.style.opacity='1';
+          e.target.style.transform='translateY(0)';
+          e.target.style.transition='opacity 0.9s, transform 0.9s';
+        }
+      }
+    });
+  },{threshold:0.15});
+
+  document.querySelectorAll('.reveal,.section-title,.wish-title,.wish-sub').forEach(el=>observer.observe(el));
+
+  // Reasons cards stagger
+  const reasonsObs=new IntersectionObserver(entries=>{
+    entries.forEach(e=>{
+      if(e.isIntersecting){
+        const cards=document.querySelectorAll('.reason-card');
+        cards.forEach((c,i)=>{
+          setTimeout(()=>{ c.style.animationDelay=i*0.1+'s'; c.classList.add('visible'); },i*100);
+        });
+        reasonsObs.disconnect();
+      }
+    });
+  },{threshold:0.1});
+  const rg=document.getElementById('reasonsGrid');
+  if(rg) reasonsObs.observe(rg);
+
+  // ===== FIREWORKS =====
+  function launchCelebration(){
+    const colors=['#e74c3c','#c0392b','#ff6b6b','#ff9a9e','#d4af37','#fff8f5','#ff4444'];
+    for(let b=0;b<8;b++){
+      setTimeout(()=>{
+        const bx=100+Math.random()*(window.innerWidth-200);
+        const by=100+Math.random()*(window.innerHeight-300);
+        for(let i=0;i<28;i++){
+          const f=document.createElement('div');
+          f.className='firework';
+          const angle=Math.random()*Math.PI*2;
+          const dist=60+Math.random()*160;
+          f.style.cssText=`left:${bx}px;top:${by}px;background:${colors[~~(Math.random()*colors.length)]};--tx:${Math.cos(angle)*dist}px;--ty:${Math.sin(angle)*dist}px;animation-delay:${b*0.15}s;`;
+          document.body.appendChild(f);
+          setTimeout(()=>f.remove(),1400);
+        }
+      },b*200);
+    }
+    // Floating hearts
+    for(let h=0;h<24;h++){
+      setTimeout(()=>{
+        const heart=document.createElement('div');
+        heart.className='floating-heart';
+        const hx=((Math.random()-0.5)*100)+'px';
+        const size=(18+Math.random()*24)+'px';
+        heart.style.cssText=`left:${20+Math.random()*60}%;bottom:${10+Math.random()*40}%;--hx:${hx};--size:${size}`;
+        heart.textContent=['❤️','🌹','💋','💕','💖'][~~(Math.random()*5)];
+        document.body.appendChild(heart);
+        setTimeout(()=>heart.remove(),2600);
+      },h*80);
+    }
+  }
+
+  // Auto-launch on page load (subtle)
+  setTimeout(()=>{
+    for(let i=0;i<3;i++){
+      setTimeout(()=>{
+        const colors=['#e74c3c','#c0392b','#ff6b6b'];
+        for(let p=0;p<12;p++){
+          const f=document.createElement('div');
+          f.className='firework';
+          const bx=window.innerWidth/2+(i-1)*200;
+          const by=window.innerHeight*0.4;
+          const angle=Math.random()*Math.PI*2;
+          const dist=40+Math.random()*80;
+          f.style.cssText=`left:${bx}px;top:${by}px;background:${colors[~~(Math.random()*3)]};--tx:${Math.cos(angle)*dist}px;--ty:${Math.sin(angle)*dist}px;`;
+          document.body.appendChild(f);
+          setTimeout(()=>f.remove(),1400);
+        }
+      },i*400);
+    }
+  },1800);
+</script>
+</body>
+</html>
